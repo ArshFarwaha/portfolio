@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arshdeep Farwaha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/35e3b9040c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("EaUyP4WqkS9cfUoZk");
+   })();
+</script>
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/AF Slash.svg" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-sun" onclick="toggleContrast()"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hi,</h1>
+          <h1 class="title blue">I'm Arsh!</h1>
+          <p class="header__para">
+            I am a driven and ambitious individual with a passion for <b class="blue">Frontend Development</b>
+            and building web applications with great user experiences.
+            Here's a bit more <b class="blue click" onclick="toggleModal()"><br>about me.</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/arshdeep-farwaha-798b03109/"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/ArshFarwaha"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="./assets/David Bragg Resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-regular fa-file"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">        
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Hi, <b class="blue">I'm Arsh!</b>
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            <b>Frontend Software Engineer</b>
+          </h4>
+          <p class="modal__para">
+            I am <b class="blue">passionate</b> about creating <b class="blue">beautiful, intuitive, and interactive user experiences.</b> 
+            <br>
+            With a strong foundation in <b class="blue">HTML, CSS, and JavaScript, and React</b>, I am able to build responsive and engaging designs that enhance the user experience of websites. 
+            <br>
+            I am constantly <b class="blue">learning</b> and staying up-to-date with the <b class="blue">latest trends and technologies</b> in <b class="blue">frontend development</b>, and I am always looking for new ways to push the <b class="blue">boundaries</b> and create cutting-edge user interfaces. 
+            <br>
+            I believe that the key to success as a <b class="blue">frontend developer</b> is a combination of <b class="blue">technical skills</b> and a <b class="blue">keen eye for design</b>, and I <b class="blue">strive to bring both</b> to every project I work on.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">REACT</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i> 
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunties</h4>
+          <form id="contact_form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" type="text" name="user_name" required id=""></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" type="text" name="user_email" required id=""></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" type="text" name="message" required id=""></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way!</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">Thanks for the message! Looking forward to speaking with you soon.</div>
+        </div>
+      </div>
+      <img src="./assets/rocket bg.png" class="shape shape--0" alt="">
+      <img src="./assets/moon bg.png" class="shape shape--1" alt="">
+      <img src="./assets/star bg.png" class="shape shape--2" alt="">
+      <img src="./assets/sun bg.png" class="shape shape--3" alt="">
+      <img src="./assets/rocket bg.png" class="shape shape--4" alt="">
+      <img src="./assets/moon bg.png" class="shape shape--5" alt="">
+      <img src="./assets/moon bg.png" class="shape shape--6" alt="">
+      <img src="./assets/sun bg.png" class="shape shape--7" alt="">
+      <img src="./assets/rocket bg.png" class="shape shape--8" alt="">
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            My <span class="blue">Projects and Accomplishments.</span>
+          </h1>
+          <ul class="project__list">
+            <li class="projects">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Library Website
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, REACT
+                  </h4>
+                  <p class="project__description--para">
+                    Our library website is built with HTML, CSS, JavaScript, and React, offering a modern and user-friendly experience for accessing our extensive collection of books and resources. Explore, borrow, and discover all that our library has to offer, all from the convenience of your device.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="https://github.com/ArshFarwaha" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://library-react.onrender.com" target="_blank"><i class="fas fa-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <ul class="project__list">
+            <li class="projects">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Movie Database
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    My movie database clone is a web-based tool built with HTML, CSS, and JavaScript. It allows users to search and browse a collection of films, with an intuitive and user-friendly interface. The database is frequently updated with new films and information. Perfect for movie buffs and casual viewers to discover their next favorite film.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="https://github.com/ArshFarwaha" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://movie-database-ysy8.onrender.com" target="_blank"><i class="fas fa-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <ul class="project__list">
+            <li class="projects">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Google Clone
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, REACT
+                  </h4>
+                  <p class="project__description--para">
+                    My Google clone is a custom search engine built with HTML, CSS, JavaScript, and React. It offers fast and accurate search results for the web. The site has a modern design and uses Ract for a smooth user experience! I hope you enjoy using my Google clone as much as I enjoyed building it!
+                  </p>
+                  <div class="project__description--link">
+                    <a href="https://github.com/ArshFarwaha" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://google-clone-26o7.onrender.com" target="_blank"><i class="fas fa-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <ul class="project__list">
+            <li class="projects">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Gmail Clone
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, React, Firebase
+                  </h4>
+                  <p class="project__description--para">
+                    My Gmail clone is a web application built using HTML, CSS, JavaScript, React and Firebase. It mimics the functionality of Gmail, allowing users to create an account, login, and send and receive emails. It uses Firebase for user authentication and real-time database.
+                  </p>
+                  <div class="project__description--link">
+                    <a href="https://github.com/ArshFarwaha" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://clone-c3f48.web.app/" target="_blank"><i class="fas fa-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <a href="#">
+            <figure>
+              <img class="footer__logo--img" src="./assets/AF Slash.svg" alt="" />
+            </figure>
+          </a>
+          <div class="footer__social--list">
+            <a
+              href="https://www.linkedin.com/in/arshdeep-farwaha-798b03109/"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/ArshFarwaha"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >GitHub</a
+            >
+            <a
+            href="./assets/David Bragg Resume.pdf"
+              target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              onclick="toggleModal()"
+              >Contact</a
+            >
+          </div>
+          <div class="footer__copyright">Copyright © 2022 Arshdeep Farwaha</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
